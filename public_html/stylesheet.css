@@ -1,0 +1,95 @@
+#content-section{
+    margin: 10px;
+}
+
+#title-section{
+    font-size: 32px;
+    margin: 10px;
+}
+
+body {
+    --black: #3a3a3c;
+    --white: #f0f1f2;
+    --grey: #aeaeb2;
+    --purple: #b462ff;
+    --fuschia: #ff45b4;
+    --blue: #18b6ff;
+    --green: #1beb9e;
+    --orange: #ff9528;
+    --yellow: #dddd25;
+    --cian: #40c8e0;
+    --red: #ff375f;
+    --line: 2.5ch;
+    --font: 'Courier New', Courier, monospace;
+}
+.nav-button{
+    color: var(--white);
+    font-weight: bold;
+
+    width: 120px;
+    padding: 10px;
+    border: none;
+    background-color: var(--grey);
+    border-radius: 20px;
+}
+
+
+#navigation-section{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#content-section{
+    flex-direction: row;
+}
+
+.task-section{
+    padding: 50px;
+    width: 120px;
+    background-color: #fff;
+}
+
+
+#not-started-title{
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#in-progress-title{
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--blue);
+
+
+    padding: 10px;
+    border-radius: 100px;
+}
+
+#done-title{
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--cian);
+
+
+    padding: 10px;
+    border-radius: 100px;
+}
+
+
+
+
+
+h1{
+    font-family: 'Helvetica';
+    font-weight: bold;
+    color: var(--black);
+}
+
+body{
+    width: 700px;
+    height:520px;
+    background-color: var(--white);
+}
