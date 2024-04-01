@@ -24,7 +24,7 @@ body {
 #titleSection{
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
+    padding: 5px;
 }
 
 #action-menu {
@@ -45,7 +45,15 @@ body {
     background-color: var(--grey);
     color: var(--white);
     font-size: 20px;
+
+    transition: 0.30s;
 }
+
+.action-button:hover {
+    background-color: var(--black);
+    color: var(--grey);
+}
+
 
 #taskStatusSection{
     display: flex;

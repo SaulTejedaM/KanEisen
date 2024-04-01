@@ -26,6 +26,23 @@ export function ActionMenu(){
       );
 }
 
+export function modalEditTask(){
+    return(
+        <section>
+            <div>
+                <h1>
+
+                </h1>
+
+
+            </div>
+
+
+
+        </section>
+    )
+}
+
 
 export function TaskStatusSection(){
     return (

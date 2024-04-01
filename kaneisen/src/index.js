@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { TaskStatusSection, ActionMenu } from "./components";
 import './styles.css';
 
-const rootElement = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = createRoot(document.getElementById('root'));
 
 rootElement.render(
     <>
         <ActionMenu/>
         <TaskStatusSection/>
     </>
-)
+);
