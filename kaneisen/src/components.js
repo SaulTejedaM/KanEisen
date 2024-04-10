@@ -9,7 +9,7 @@ import { IoClose, IoInvertModeOutline, IoLanguage } from "react-icons/io5";
 
 export function ModalSettings({ isOpen, onClose }) {
     return (
-        <div class="modal" style={{ display: isOpen ? 'block' : 'none' }}>
+        <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
             <div class="modal-content">
                 <div class="modal-title">
                     <h1>
@@ -22,7 +22,7 @@ export function ModalSettings({ isOpen, onClose }) {
                 <div class="modal-section">
                     <button class="settings-option">
                         <IoInvertModeOutline />
-                        <p class="modal-subtitle">
+                        <p class="modal-subtitle settings-option">
                             Theme
                         </p>
                         <p class="modal-text">
@@ -81,16 +81,16 @@ export function ModalSettings({ isOpen, onClose }) {
 
 export function ModalNewTask({ isOpen, onClose }) {
     return (
-        <div class="modal" style={{ display: isOpen ? 'block' : 'none' }}>
+        <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
             <div class="modal-content">
-                <div class="modal-title">
-                    <input id="task-name" defaultValue={"Untitled"}/>
+                <div class="modal-header">
+                    <input id="task-name" type='text' defaultValue={"Untitled"}/>
                     <span class="close-modal" onClick={onClose}>
                         <IoClose />
-                    </span> 
+                    </span>
                 </div>
-                <div class="modal-section">
-                    <div id="task-status" class="modal-title">
+                <div class="modal-header">
+                    <div id="task-status">
                         <p class="modal-subtitle">
                             Status 
                         </p>
@@ -111,20 +111,16 @@ export function ModalNewTask({ isOpen, onClose }) {
                         </button>
                     </div>
                 </div>
-                <div class="modal-section">
+                <div class="modal-header">
                     <p class="modal-subtitle">
                         Desciption: 
                     </p>
-
                 </div>
+
                 <div class="modal-section">
-                    <p  id="task-description" class="modal-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <textarea id="task-description" rows="4" cols="50" spellcheck="true">
+                        Empty
+                    </textarea>
                 </div>
                 <div class="button-section">
                     <button class="save-button">
@@ -141,7 +137,7 @@ export function ModalNewTask({ isOpen, onClose }) {
 
 export function ModalMatrix({ isOpen, onClose }) {
     return (
-        <div class="modal" style={{ display: isOpen ? 'block' : 'none' }}>
+        <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
             <div class="modal-content">
                 <div class="modal-title">
                     <h1>
