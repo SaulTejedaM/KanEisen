@@ -11,7 +11,7 @@ export function ModalSettings({ isOpen, onClose }) {
     return (
         <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
             <div class="modal-content">
-                <div class="modal-title">
+                <div class="modal-header">
                     <h1>
                         Settings
                     </h1>
@@ -84,12 +84,12 @@ export function ModalNewTask({ isOpen, onClose }) {
         <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
             <div class="modal-content">
                 <div class="modal-header">
-                    <input id="task-name" type='text' defaultValue={"Untitled"}/>
+                    <input id="task-name" type='text' defaultValue={"Untitled"} lang="en" spellcheck="true"/>
                     <span class="close-modal" onClick={onClose}>
                         <IoClose />
                     </span>
                 </div>
-                <div class="modal-header">
+                <div class="modal-section">
                     <div id="task-status">
                         <p class="modal-subtitle">
                             Status 
@@ -111,14 +111,14 @@ export function ModalNewTask({ isOpen, onClose }) {
                         </button>
                     </div>
                 </div>
-                <div class="modal-header">
+                <div class="modal-section">
                     <p class="modal-subtitle">
                         Desciption: 
                     </p>
                 </div>
 
                 <div class="modal-section">
-                    <textarea id="task-description" rows="4" cols="50" spellcheck="true">
+                    <textarea id="task-description" rows="4" cols="50" lang="en" spellcheck="true">
                         Empty
                     </textarea>
                 </div>
@@ -139,13 +139,11 @@ export function ModalMatrix({ isOpen, onClose }) {
     return (
         <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
             <div class="modal-content">
-                <div class="modal-title">
-                    <h1>
-                        Eisenhower Matrix
-                    </h1>
+                <div class="modal-header">
+                    <input id="task-name" type='text' defaultValue={"Untitled"} lang="en" spellcheck="true"/>
                     <span class="close-modal" onClick={onClose}>
                         <IoClose />
-                    </span> 
+                    </span>
                 </div>
             </div>
         </div>
