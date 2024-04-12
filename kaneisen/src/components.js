@@ -7,6 +7,8 @@ import { IoClose, IoInvertModeOutline, IoLanguage } from "react-icons/io5";
 // MdDashboard
 // MdMode edit icon
 
+
+
 export function ModalSettings({ isOpen, onClose }) {
     return (
         <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
@@ -80,53 +82,97 @@ export function ModalSettings({ isOpen, onClose }) {
 }
 
 export function ModalNewTask({ isOpen, onClose }) {
+    const [status, setStatus] = useState('Empty');
+
+    const handleStatusChange = (newStatus) => {
+        setStatus(newStatus);
+    };
+
+    const [category, setCategory] = useState('Empty');
+    const handleCategoryChange = (newCategory) => {
+        setCategory(newCategory);
+    };
+
     return (
-        <div class="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
-            <div class="modal-content">
-                <div class="modal-header">
-                    <input id="task-name" type='text' defaultValue={"Untitled"} lang="en" spellcheck="true"/>
-                    <span class="close-modal" onClick={onClose}>
+        <div className="modal-background" style={{ display: isOpen ? 'block' : 'none' }}>
+            <div className="modal-content">
+                <div className="modal-header">
+                    <input id="task-name" type='text' defaultValue={"Untitled"} lang="en" spellCheck="true"/>
+                    <span className="close-modal" onClick={onClose}>
                         <IoClose />
                     </span>
                 </div>
-                <div class="modal-section">
+                <div className="modal-section">
                     <div id="task-status">
-                        <p class="modal-subtitle">
-                            Status 
+                        <p className="modal-subtitle">
+                            Status
                         </p>
-                        <button id="activity-status" class="modal-task-status">
-                            <FaCircle />
-                            <p>
-                                Delegate
-                            </p>
-                        </button>
-                        <p class="modal-subtitle">
-                            Category 
+                        <div className="dropdown">
+                            <button className="dropbtn">
+                                <FaCircle />
+                                <span>{status}</span>
+                            </button>
+                            <div className="dropdown-content">
+                                <button id="activity-status" class="modal-task-status" onClick={() => handleStatusChange('Not Started')}>
+                                    <FaCircle />
+                                    Not Started
+                                </button>
+                                <button onClick={() => handleStatusChange('In Progress')}>
+                                    <FaCircle />
+                                    In Progress
+                                </button>
+                                <button onClick={() => handleStatusChange('Completed')}>
+                                    <FaCircle />
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <p className="modal-subtitle">
+                            Category
                         </p>
-                        <button id="activity-status" class="modal-task-status">
-                            <FaCircle />
-                            <p>
-                                Delegate
-                            </p>
-                        </button>
+                        <div className="dropdown">
+                            <button className="dropbtn">
+                                <FaCircle />
+                                <span>{category}</span>
+                            </button>
+                            <div className="dropdown-content">
+                                <button onClick={() => handleCategoryChange('Do it now')}>
+                                    <FaCircle />
+                                    Do it now
+                                </button>
+                                <button onClick={() => handleCategoryChange('Decide')}>
+                                    <FaCircle />
+                                    Decide
+                                </button>
+                                <button onClick={() => handleCategoryChange('Delegate')}>
+                                    <FaCircle />
+                                    Delegate
+                                </button>
+                                <button onClick={() => handleCategoryChange('Delete')}>
+                                    <FaCircle />
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="modal-section">
-                    <p class="modal-subtitle">
-                        Desciption: 
+                <div className="modal-section">
+                    <p className="modal-subtitle">
+                        Description:
                     </p>
                 </div>
 
-                <div class="modal-section">
-                    <textarea id="task-description" rows="4" cols="50" lang="en" spellcheck="true">
+                <div className="modal-section">
+                    <textarea id="task-description" rows="4" cols="50" lang="en" spellCheck="true">
                         Empty
                     </textarea>
                 </div>
-                <div class="button-section">
-                    <button class="save-button">
+                <div className="button-section">
+                    <button className="save-button">
                         Save
                     </button>
-                    {/* <button class="delete-button">
+                    {/* <button className="delete-button">
                         Delete
                     </button> */}
                 </div>
