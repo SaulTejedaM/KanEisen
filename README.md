@@ -7,3 +7,4 @@ KanEisen integrates two of thee most regarded productivity methodologies: the Ka
 With this extension, users can effortlessly prioritize their tasks based on both urgency and importance, allowing for strategic decision-making in task management. Whether tackling a demanding project or simply navigating daily responsibilities, our extension empowers users to optimize their time and focus on what truly matters.
 </p>
 
+https://github.com/streamlit
